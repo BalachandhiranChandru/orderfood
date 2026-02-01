@@ -1,0 +1,223 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ff8a80;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav-links {
+    display: none;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+.hero-content {
+    background: linear-gradient(to right, #fff9c4, #f8bbd0);
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.hero-content p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+}
+.btn {
+    background-color: #ff8a80;
+    border: none;
+    padding: 12px 30px;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+}
+.hero-image {
+    flex: 1;
+    /* background: url(assests/pexels-robin-stickel-70497.jpg); */
+    /* background-image: url("assests/pexels-robin-stickel-70497.jpg"); */
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gallery Section */
+.gallery-container {
+    background: linear-gradient(to right, #fff9c4, #f48fb1);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.image-grid {
+    display: flex;
+    gap: 15px;
+}
+.grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.grid-left img,
+.grid-middle img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.grid-middle img {
+    height: 315px;
+    width: 180px;
+}
+
+.info-box {
+    background-color: #ff8a80;
+    padding: 40px;
+    color: black;
+    max-width: 400px;
+}
+.info-box h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+.click-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablet (768px) */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
+    .hero {
+        flex-direction: row;
+    }
+    .gallery-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .grid-left img {
+        width: 200px;
+        height: 200px;
+    }
+    .grid-middle img {
+        width: 230px;
+        height: 415px;
+    }
+}
+
+/* Desktop (1024px) */
+@media (min-width: 1024px) {
+    .hero-content {
+        padding: 80px;
+    }
+    .info-box {
+        padding: 60px;
+        min-width: 450px;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #ff5e62;
+    letter-spacing: 3px;
+    margin: 0px;
+    padding: 15px 60px;
+}
+
+
+/* Navbar Container */
+.navbar {
+    background-color: #ff8a80; /* Matching your theme color */
+    padding: 0 5%;            /* Side padding for breathability */
+    height: 70px;             /* Consistent height */
+    display: flex;
+    justify-content: space-between; /* Pushes links left/center and icon right */
+    align-items: center;
+}
+
+/* Links Container */
+.nav-links {
+    display: flex;
+    flex: 1;                  /* Takes up available space */
+    justify-content: space-evenly; /* This creates the equal spacing */
+    max-width: 80%;           /* Prevents links from spreading too wide on huge screens */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* --- RESPONSIVE FIXES --- */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on mobile */
+    }
+    .navbar {
+        justify-content: flex-end; /* Only show the hamburger on the right */
+    }
+}
